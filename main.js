@@ -59,11 +59,11 @@ const dictate = () => {
       paragraph = document.createElement('p');
       container.appendChild(paragraph);
 
-      if (speechToText.includes('What is the time now')) {
+      if (speechToText.includes('what is the time now')) {
         speak(getTime);
       };
 
-      if (speechToText.includes('What is today\'s date')) {
+      if (speechToText.includes('what is today\'s date')) {
         speak(getDate);
       };
 
@@ -144,8 +144,6 @@ const speak = (action) => {
   utterThis = new SpeechSynthesisUtterance(action());
   setVoice(utterThis);
   synth.speak(utterThis);
-  recognition.abort();
-  recognition.stop();
 };
 
 const openUrl = (url) => {
