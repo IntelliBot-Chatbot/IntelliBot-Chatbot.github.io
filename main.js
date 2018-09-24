@@ -51,8 +51,12 @@ const dictate = () => {
     .join('');
       console.log(speechToText);
     
-      // speechToText contents are displayed
-    paragraph.textContent = speechToText;
+      if(listening)
+      {
+        // speechToText contents are displayed
+        paragraph.textContent = speechToText;
+      }
+      
 
     if (event.results[0].isFinal) {
       container.scrollTo(0, container.scrollHeight);
