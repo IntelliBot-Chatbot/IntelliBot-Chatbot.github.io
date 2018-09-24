@@ -149,7 +149,10 @@ const speak = (action) => {
   utterThis = new SpeechSynthesisUtterance(action());
   setVoice(utterThis);
   synth.speak(utterThis);
-  listening = true;
+  setTimeout(function(){
+    listening=true;
+  }, 8000);
+
 };
 
 const openUrl = (url) => {
