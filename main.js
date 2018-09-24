@@ -144,6 +144,8 @@ const speak = (action) => {
   utterThis = new SpeechSynthesisUtterance(action());
   setVoice(utterThis);
   synth.speak(utterThis);
+  recognition.abort();
+  recognition.stop();
 };
 
 const openUrl = (url) => {
