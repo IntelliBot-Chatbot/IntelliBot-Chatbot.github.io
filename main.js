@@ -59,11 +59,11 @@ const dictate = () => {
       paragraph = document.createElement('p');
       container.appendChild(paragraph);
 
-      if (speechToText.includes('time')) {
+      if (speechToText.includes('What is the time now')) {
         speak(getTime);
       };
 
-      if (speechToText.includes('date')) {
+      if (speechToText.includes('What is today\'s date')) {
         speak(getDate);
       };
 
