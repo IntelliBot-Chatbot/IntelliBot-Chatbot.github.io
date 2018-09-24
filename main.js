@@ -141,10 +141,11 @@ const getTheWeather = (speech) => {
 };
 
 const speak = (action) => {
-  recognition.stop();
+  listening = false;
   utterThis = new SpeechSynthesisUtterance(action());
   setVoice(utterThis);
   synth.speak(utterThis);
+  listening = true;
 };
 
 const openUrl = (url) => {
