@@ -141,6 +141,7 @@ const getTheWeather = (speech) => {
 };
 
 const speak = (action) => {
+  recognition.stop();
   utterThis = new SpeechSynthesisUtterance(action());
   setVoice(utterThis);
   synth.speak(utterThis);
